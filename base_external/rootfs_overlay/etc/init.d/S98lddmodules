@@ -1,0 +1,45 @@
+#!/bin/sh
+
+# Start/stop script to load/unload drivers as per the requirements of assignment 7, part 2
+
+do_load_scull() {
+	/sbin/scull_load
+}
+
+do_load_faulty() {
+	/sbin/module_load faulty
+}
+
+do_load_hello() {
+	modprobe hello
+}
+
+do_unload_scull() {
+	/sbin/scull_unload
+}
+
+do_unload_faulty() {
+	/sbin/module_unload faulty
+}
+
+do_unload_hello() {
+	rmmod hello
+}
+
+case "$1" in
+	start)
+		do_load_scull
+		do_load_faulty
+		do_load_hello
+		;;
+	stop)
+		do_unload_hello
+		do_unload_faulty
+		do_unload_scull
+		;;
+	*)
+		echo "Usage: $0 {start|stop}"
+esac
+
+exit 0
+

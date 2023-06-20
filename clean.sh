@@ -1,5 +1,2 @@
 #!/bin/bash
-
-cd buildroot
-make distclean
-cd ..
+make -C buildroot distclean

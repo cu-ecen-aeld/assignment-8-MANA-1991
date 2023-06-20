@@ -1,2 +1,2 @@
-name: project_base
-description: Base customization for project
+name: AESD_BUILDROOT
+desc: AESD assignment 5 & 7, Buildroot & socket server & LDD
