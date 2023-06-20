@@ -1,4 +1,6 @@
+
 config BR2_PACKAGE_AESD_ASSIGNMENTS
 	bool "aesd-assignments"
 	help
-	  Includes the aesdsocket application as developed for assignment 5, part 1.
+	  Includes the writer executable, finder.sh and tester.sh in the kernel image.
+	  Used to understand buildroot external trees and package builds.
